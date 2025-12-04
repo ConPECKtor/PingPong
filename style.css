@@ -1,0 +1,92 @@
+html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+    margin: 0;
+}
+
+
+body {
+    display: flex;
+}
+
+
+button {
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+
+ul {
+    padding: 0;
+    list-style: none;
+}
+
+/* input {
+    all: unset;
+    border: 0;
+    resize: none;
+
+} */
+
+textarea {
+    all: unset;
+    border: 0;
+    resize: none;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+
+/* .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 350px;
+    width: 350px;
+    margin: 0 auto;
+    background-color: darkgrey;
+}
+
+.ball {
+    width: 20px;
+    height: 20px;
+    background-color: black;
+    border-radius: 50px;
+    position: absolute;
+}
+
+
+.mover { 
+    background-color: black;
+    height: 50px;
+    width: 20px;
+} */
