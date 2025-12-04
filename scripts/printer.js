@@ -62,22 +62,21 @@ class Printer {
     }
 
     drawPlayer(player) {
-        // Принимает координату Х и две координаты Y (верхнюю и нижнюю) [cite: 154]
-        // Игрок это векторная линия с закругленными краями [cite: 365]
-        const lineThickness = player.width * 2; // Реальная толщина игрока - два его радиуса [cite: 25, 365]
-        const y2 = player.y + this.set.player.height; // Нижняя точка [cite: 364]
+
+        const borderThickness = player.width * 2; 
+        const y2 = player.y + this.set.player.height; 
 
         this.game.drawLine(
-            player.x, player.y, // Начальные координаты (X, Y верхней точки)
-            player.x, y2, // Конечные координаты (X, Y нижней точки)
-            borderThickness, // Толщина линии
-            player1.color // Цвет игрока
+            player.x, player.y, 
+            player.x, y2, 
+            borderThickness,
+            player.color 
         );
     }
 
 
     clearCanvas(layerName) {
-        // Передаем ей имя нужного слоя в виде 'строки' текста [cite: 157]
+        
         const canvas = this.layers.get(layerName);
         if (canvas) {
             canvas.clear();

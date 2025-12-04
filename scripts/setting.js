@@ -20,13 +20,13 @@ class Settings {
         this.ball = {
             speed: 5,
             radius: 3,
-            defaultXCoords: this.width / 2,
-            defaultYCoords: this.height / 2,
+            defaultXCoords: this.fieldWidth / 2,
+            defaultYCoords: this.fieldHeight / 2,
             color: "red",
             beatenCounter: 0,
             returnSpeed: 3,
-            x: this.width / 2,
-            y: this.height / 2,
+            x: this.fieldWidth / 2,
+            y: this.fieldHeight / 2,
             accelerationX: 3,
             accelerationY: 3
             
@@ -38,12 +38,12 @@ class Settings {
             speed: 4,
             distanceFrowTopBottom: 30,
             distanceFromWall: 20, 
-            defaultY: (this.height / 2) - (100 / 2),
+            defaultY: (this.fieldHeight / 2) - (100 / 2),
         }
 
         this.player1 = {
             point: 0,
-            plusPointX: (this.width / 2) - 40,
+            plusPointX: (this.fieldWidth / 2) - 40,
             color: "red",
             keys: new Map([
                 [87, 'up'], // W
@@ -53,7 +53,7 @@ class Settings {
 
         this.player2 = {
             point: 0,
-            plusPointX: (this.width / 2) - 40,
+            plusPointX: (this.fieldWidth / 2) - 40,
             color: "blue",
             keys: new Map([
                 [38, 'up'], // Стрелка вверх

@@ -13,7 +13,7 @@ class Canvas {
         this.canvas.width = set.width
         this.canvas.height = set.height
         
-        document.getElementById("#game").appendChild(this.canvas)
+        document.getElementById("game").appendChild(this.canvas)
     }
 
     drawText(text, x, y, color, size, align, textBaseline) {
@@ -21,7 +21,7 @@ class Canvas {
 
         this.ctx.font = `${size}px Arial`
 
-        this.ctx.alignText = align
+        this.ctx.textAlign = align
 
         this.ctx.textBaseline = textBaseline
 
@@ -44,10 +44,10 @@ class Canvas {
         this.ctx.moveTo(x + radius, y)
 
         this.ctx.lineTo(x + width - radius, y)
-        this.ctx.quadranticCurveTo(x + width, y, x + width, y + radius)
+        this.ctx.quadraticCurveTo(x + width, y, x + width, y + radius)
 
         this.ctx.lineTo(x + width, y + height - radius)
-        this.ctx.quadranticCurveTo(x + width, y + height, x + width - radius, y + height)
+        this.ctx.quadraticCurveTo(x + width, y + height, x + width - radius, y + height)
 
         this.ctx.lineTo(x + radius, y + height)
         this.ctx.quadraticCurveTo(x, y + height, x, y + height - radius)
@@ -68,7 +68,7 @@ class Canvas {
     drawCircle(x, y, radius, color, lineColor = false, lineThickness = 0) {
         this.ctx.beginPath()
 
-        this.ctx.arc(x,y,radius, 0, Math * PI)
+        this.ctx.arc(x,y,radius, 0, Math.PI * 2)
 
         this.ctx.fillStyle = color
 
