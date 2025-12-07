@@ -9,7 +9,7 @@ class Settings {
         this.fieldWidth = 1280
         this.fieldHeight = 720   
         this.fieldBorderRadius = 20
-        this.fieldBackgroundColor = "lavander" // fillColor
+        this.fieldBackgroundColor = "lavander" 
         this.borderThickness = 10
         this.borderColor = "red"
         this.textTimerColor = "white"
