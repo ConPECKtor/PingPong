@@ -10,8 +10,8 @@ class Canvas {
 
         this.ctx = this.canvas.getContext("2d")
 
-        this.canvas.width = set.width
-        this.canvas.height = set.height
+        this.canvas.width = set.fieldWidth
+        this.canvas.height = set.fieldHeight
         
         document.getElementById("game").appendChild(this.canvas)
     }
