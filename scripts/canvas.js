@@ -97,7 +97,7 @@ class Canvas {
     }
 
     clear() {
-        this.ctx.clearRect(0,0,this.set.width,this.set.height)
+        this.ctx.clearRect(0,0,this.set.fieldWidth,this.set.fieldHeight)
     }
 }
 

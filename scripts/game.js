@@ -1,5 +1,8 @@
 import Settings from './setting.js'
 import Printer from './printer.js'
+import Ball from './ball.js'
+import Player from './player.js'
+
 
 class Game {
     constructor() {
@@ -8,9 +11,9 @@ class Game {
 
         this.printer = new Printer(this.set)
 
-        // this.ball = new Ball(this)
-        // this.player1 = new Player(this, this.set.player1, 'player1')
-        // this.player2 = new Player(this, this.set.player2, 'player2')
+        this.ball = new Ball(this)
+        this.player1 = new Player(this, this.set.player1, 'player1')
+        this.player2 = new Player(this, this.set.player2, 'player2')
 
         this.requestId = true
 
@@ -19,16 +22,17 @@ class Game {
     }
 
 
+    // Запуск игры впервые
     firstLaunch() {
 
         this.printer.drawCourt()
 
-        
-        // this.player1.draw()
-        // this.player2.draw()
 
-        
-        // this.printer.drawScore(this.set.player1.point, this.set.player2.point)
+        this.player1.draw()
+        this.player2.draw()
+
+
+        this.printer.drawScore(this.set.player1.point, this.set.player2.point)
 
         // this.printer.drawBriefing()
 
@@ -42,9 +46,9 @@ class Game {
     timeLoop() {
         this.printer.clearGameLayer()
 
-        // this.ball.update()
-        // this.player1.update()
-        // this.player2.update()
+        this.ball.update()
+        this.player1.update()
+        this.player2.update()
 
         this.start(this.requestId)
     }
@@ -53,7 +57,6 @@ class Game {
 
     start(reqId) {
         if (reqId) {
-
             requestAnimationFrame(() => this.timeLoop())
         }
     }
@@ -88,7 +91,7 @@ class Game {
 
                 setTimeout(() => {
                     this.printer.clearCanvas('text');
-                    callback();
+                    callback()
                 }, 800)
             }
         }, 1000)
@@ -119,12 +122,14 @@ class Game {
 
         this.printer.drawScore(this.set.player1.point, this.set.player2.point);
 
-        // this.player1.defaultSet()
-        // this.player2.defaultSet()
-        // this.ball.defaultSet()
+        this.player1.defaultSet()
+        this.player2.defaultSet()
+        this.ball.defaultSet()
 
-        // this.player1.draw()
-        // this.player2.draw()
+        this.printer.clearGameLayer()
+
+        this.player1.draw()
+        this.player2.draw()
 
         setTimeout(() => {
             this.requestId = true;

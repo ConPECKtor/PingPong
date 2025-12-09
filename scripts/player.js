@@ -3,7 +3,7 @@ import Settings from './setting.js'
 class Player {
     constructor(game, playerSettings, playerName) {
         this.game = game
-        this.set = Settings()
+        this.set = new Settings()
 
         this.ball = game.ball.ball
         this.classBall = game.ball
@@ -32,11 +32,10 @@ class Player {
         document.addEventListener('keyup', (event) => this.keyController(event, false))
     }
 
-    // @param {Event} event
-    // @param {boolean} isPressed
+        // @param {Event} event
+        // @param {boolean} isPressed
 
     // Вот эти 2 штуки ругаются, неправильный синтаксис почему то 
-
     keyController(event, isPressed) {
     
         if (this.keys.has(event.keyCode)) {
@@ -93,12 +92,10 @@ class Player {
     }
 
     draw() {
-        
         this.game.printer.drawPlayer(this)
     }
 
     defaultSet() {
-    
         this.y = this.set.player.defaultY
         this.shadowUp = 0
         this.shadowDown = 0

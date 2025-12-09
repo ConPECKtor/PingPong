@@ -45,7 +45,7 @@ class Printer {
             this.set.borderColor, this.set.borderThickness 
         )
 
-        const distFromWall = this.set.player.distanceFromWall
+        const distFromWall = this.set.player.distanceFromWall 
         const courtHeight = this.set.fieldHeight
 
         this.background.drawLine(distFromWall, 0, distFromWall, courtHeight, this.set.borderThickness, this.set.borderColor)
@@ -71,7 +71,7 @@ class Printer {
             player.x, y2, 
             borderThickness,
             player.color 
-        );
+        )
     }
 
 
@@ -98,14 +98,14 @@ class Printer {
             player1Score, centerX - 20, scoreY, 
             this.set.player1.color, '48', 
             'right', 'bottom'
-        );
+        )
 
         
         this.score.drawText(
             player2Score, centerX + 20, scoreY, 
             this.set.player2.color, '48', 
             'left', 'bottom'
-        );
+        )
     } // 
 
     drawGoalText(playerColor, plusOneX, plusOneAlign) {

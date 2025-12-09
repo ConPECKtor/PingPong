@@ -1,8 +1,3 @@
-// let Player1 = document.querySelector(".p1")
-// let Player2 = document.querySelector(".p2")
-// let ball = document.querySelector(".ball")
-// let ballCoords = ball.getBoundingClientRect()
-
 
 class Settings {
     constructor(params) {
@@ -11,7 +6,7 @@ class Settings {
         this.fieldBorderRadius = 20
         this.fieldBackgroundColor = "lavander" 
         this.borderThickness = 10
-        this.borderColor = "red"
+        this.borderColor = "#004A7F"
         this.textTimerColor = "white"
         this.scoreTextColor = "#606060"
         this.technicalColor = "orange"
